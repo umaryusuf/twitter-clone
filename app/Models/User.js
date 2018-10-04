@@ -55,6 +55,10 @@ class User extends Model {
     ).pivotTable('followers')
   }
 
+  replies () {
+    return this.hasMany('App/Models/Reply')
+  }
+
 }
 
 module.exports = User
